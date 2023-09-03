@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap');
+
+:root {
+  /*primary colors*/
+  --prim-green: #495e57;
+  --prim-yellow: #f4ce14;
+
+  /*secondary colors*/
+  --sec-pink: #ee9972;
+  --sec-light-pink: #fbdabb;
+
+  /*hightlight colors*/
+  --high-white: #edefee;
+  --high-black: #333333;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,6 +27,16 @@
 
 header {
   display: flex;
+  color: var(--high-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Markazi Text';
 }
 
 header img {
@@ -31,12 +57,27 @@ header nav ul {
 }
 nav ul li a {
   text-decoration: none;
+  color: inherit;
 }
 
 footer {
+  background-color: var(--prim-green);
+  color: var(--high-white);
+  padding: 2em 0;
+}
+
+footer a {
+  color: var(--high-white);
+}
+
+footer .container {
   display: flex;
-  flex-direction: row;
+}
+
+.footer-nav {
+  display: flex;
   justify-content: space-evenly;
+  flex-grow: 1;
 }
 
 footer img {

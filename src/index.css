@@ -3,10 +3,23 @@
 body {
   margin: 0px;
   font-family: 'Karla';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Markazi Text';
+}
+
+h1 {
+  color: var(--prim-yellow);
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 40px;
 }

@@ -21,27 +21,32 @@
 }
 
 .container {
-  width: 80%;
+  width: 887px;
+  max-width: 80%;
   margin: 0 auto;
+}
+
+button {
+  padding: 0.75em 2em;
+  background-color: var(--prim-yellow);
+  color: var(--high-black);
+  border-radius: 16px;
+  border-style: none;
+  font-weight: bold;
 }
 
 header {
   display: flex;
   color: var(--high-black);
+  padding: 1em 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Markazi Text';
+img {
+  max-width: 100%;
 }
 
 header img {
   width: 200px;
-  max-width: 100%;
 }
 
 nav {
@@ -58,6 +63,70 @@ header nav ul {
 nav ul li a {
   text-decoration: none;
   color: inherit;
+}
+
+section {
+  padding: 2em 0;
+}
+
+#hero {
+  background-color: var(--prim-green);
+}
+
+#hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+#hero img {
+  width: 325px;
+  border-radius: 16px;
+}
+
+#hero p,
+#hero h2 {
+  color: var(--high-white);
+}
+
+.specials-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.card {
+  background-color: var(--high-white);
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  max-width: 265px;
+}
+
+.card h4 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+.card img {
+  width: 265px;
+  height: 185px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 footer {
@@ -82,7 +151,6 @@ footer .container {
 
 footer img {
   width: 100px;
-  max-width: 100%;
 }
 
 footer ul {

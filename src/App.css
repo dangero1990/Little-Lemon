@@ -27,12 +27,13 @@
 }
 
 button {
-  padding: 0.75em 2em;
+  padding: 1rem 2rem;
   background-color: var(--prim-yellow);
   color: var(--high-black);
   border-radius: 16px;
-  border-style: none;
-  font-weight: bold;
+  border: 1px solid #000;
+  font-weight: 500;
+  font-size: 16pt;
 }
 
 header {
@@ -82,6 +83,7 @@ section {
 #hero img {
   width: 325px;
   border-radius: 16px;
+  justify-self: end;
 }
 
 #hero p,
@@ -89,10 +91,23 @@ section {
   color: var(--high-white);
 }
 
+#hero h2 {
+  margin-bottom: 0.5rem;
+}
+
+#hero button {
+  margin-top: 2em;
+}
+
 .specials-heading {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2em;
+}
+
+.specials-heading button {
+  flex-grow: 0;
+  align-self: center;
 }
 
 .card-grid {
@@ -106,14 +121,8 @@ section {
   border-radius: 16px 16px 0 0;
   overflow: hidden;
   max-width: 265px;
-}
-
-.card h4 {
-  font-size: 18px;
-}
-
-.card p {
-  font-size: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card img {
@@ -123,10 +132,119 @@ section {
 }
 
 .card-body {
-  padding: 1em;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  padding: 1em;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card span {
+  color: var(--sec-pink);
+  font-weight: 500;
+}
+.card-body p {
+  flex-grow: 1;
+}
+
+.testimonials {
+  background-color: var(--prim-green);
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  color: var(--high-white);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  padding-bottom: 4em;
+}
+
+.testimonial-card {
+  display: grid;
+  grid-template-areas:
+    'rating rating'
+    'img name'
+    'review review';
+  grid-auto-rows: max-content;
+  padding: 1em;
+  background-color: var(--high-white);
+}
+
+.testimonial-card span {
+  grid-area: rating;
+}
+
+.testimonial-card img {
+  grid-area: img;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial-card h4 {
+  grid-area: name;
+  align-self: center;
+  margin-left: 1em;
+}
+
+.testimonial-card p {
+  grid-area: review;
+  margin-top: 1em;
+}
+
+.testimonial-card p:before {
+  content: open-quote;
+}
+
+.testimonial-card p:after {
+  content: close-quote;
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about img {
+  width: 272px;
+  height: 338px;
+  object-fit: cover;
+}
+
+.about-imgs {
+  position: relative;
+}
+
+#img1 {
+  margin-top: 4em;
+  object-position: right;
+}
+
+#img2 {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0.25em;
+}
+
+.about-text {
+  padding-right: 2em;
+  align-self: center;
+}
+
+.about-text h3 {
+  margin-bottom: 0.5em;
 }
 
 footer {
@@ -140,20 +258,28 @@ footer a {
 }
 
 footer .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.footer-nav {
-  display: flex;
-  justify-content: space-evenly;
-  flex-grow: 1;
+footer article {
+  margin-left: 2em;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  gap: 1rem;
+}
+
+footer nav {
+  margin-top: 0;
 }
 
 footer img {
-  width: 100px;
+  width: 162px;
+  height: 279px;
+  object-fit: cover;
 }
 
 footer ul {
   list-style: none;
-  margin-top: 1em;
+  flex: 1;
 }
